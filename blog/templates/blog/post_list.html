@@ -7,10 +7,12 @@
       <h1>Tessay</h1>
       <p>established 6 june 2015</p>
     </div>
-
-    <div>
-      <h2>Goedendag</h2>
-      <p>jaja dit is 'm dames en heren</p>
-    </div>
+{% for post in posts %}
+      <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+      </div>
+{% endfor %}
   </body>
 </html>
